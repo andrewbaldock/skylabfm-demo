@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skylab FM demo version</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/longshadow.css" rel="stylesheet" type="text/css">
+    <script data-main="js/app" src="js/lib/require.js"></script>
+</head>
+<body>
+	<a href="/"><h1 class="longshadow">skylab fm</h1></a>
+	<p id="subtitle">soundcloud listening lounge</p>
+    <div id="main">
+		<div id="thequery">
+			<form action="" id="search" name="search" onsubmit="return false;">
+				<div id="querywrap">
+					<input class="field" id="query" type="text" value= "" onfocus="this.select();" placeholder="search for music">
+					<em id="searchclear" class="icon-remove-circle" id="searchx"></em>
+				</div>
+				<button type="submit">
+					<em class="icon-search"></em>
+				</button>
+			</form>
+		</div>
+		<div id="results"></div>
+	</div><!--/main-->
+	<div id="spinner"></div>
+</body>
+</html>
