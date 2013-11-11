@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'app/df-auth', 'json2', 'player', 'backbone', 'spin'/*, 'app/searches'*/,  'app/soundcloud'  ], function($) {
+define(['jquery', 'underscore', 'app/df-auth-model', 'json2', 'player', 'backbone', 'spin', 'app/sc-search-view'  ], function($) {
 
     $(function() {
 
@@ -27,7 +27,7 @@ define(['jquery', 'underscore', 'app/df-auth', 'json2', 'player', 'backbone', 's
 		$('#spinner').hide();
 
 		// DREAMFACTORY AUTHENTICATION
-        var DfAuth = require('app/df-auth');
+        var DfAuth = require('app/df-auth-model');
 		var dfAuth = new DfAuth();
         dfAuth.getDreamFactoryToken();
 
