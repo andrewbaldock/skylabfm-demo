@@ -1,6 +1,15 @@
 @import url(http://fonts.googleapis.com/css?family=Codystar|Montserrat|Exo:500italic);
 @import url(http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css);
 
+/* SkyLabFM.com styles
+--------------------------------------------------------*/
+a, button, input, img, div {
+    transition: all 0.2s ease-in-out;
+}
+html {
+    transition: all 1.5s ease-in-out;
+}
+
 #playzoom{
     font-size:150px;
     color:white;
@@ -12,7 +21,7 @@
 html {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    background: url('../img/blu_stripes.png') #fff;
+    background: url('blu_stripes.png') #fff;
     background-attachment: fixed;
     color: #979797;
     padding:0px;
@@ -61,6 +70,7 @@ h1 {
     letter-spacing: 3px;
     margin-top:14px;
     padding:7px;
+    text-shadow: 1px 1px 1px white;
 }
 .inplay #subtitle {
     display:none;
@@ -75,11 +85,9 @@ h1 {
     
 }
 .help:hover #help {
-
     display:block;
     z-index:1000;
 }
-
 #help {
     z-index:50;
     margin:10px 30px 10px 20px;
@@ -88,13 +96,11 @@ h1 {
     font-size:18px;
     padding:20px;
     top:30px;
-}
-#help{
     display:none;
 }
 .field {
     height: 30px;
-    font-size: 25px;œ
+    font-size: 25px;
     line-height: 30px;
     font-family: 'Montserrat', sans-serif;
     color: #222;
@@ -103,7 +109,10 @@ input:focus {
     background-color: #ECF6FF;
 }
 #spinner {
-    background-color:rgba(100,100,100,0.2);
+    background-color:rgba(100,100,100,0.7);
+    position:fixed;
+    top:325px;
+    left:50%;
 }
 #thequery button {
     width: 59px;
@@ -178,17 +187,14 @@ button:hover {
     font-size: 12px;
     color: #777;
 }
-
 #tippytop {
     font-size: 14px;
     z-index: 5;
-   /* background-color: rgba(0, 177, 247, 0.12); */
     display: block;
     padding: 10px;
     position: absolute;
     top: 0px;
     right: 15px;
-    /*font-family:helvetica;*/
 }
 .inplay #tippytop {
     z-index:5;
@@ -231,18 +237,14 @@ button:active {
 #thequery {
     display: none;
     height: 50px;
+    margin-top: 15px;
 }
 #main {
     margin-top: -30px;
     display: inline-block;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
-    /*padding:0px 30px;*/
     width:100%;
-    /* background-image: url('../img/skylab.png');
-    background-repeat: repeat;
-    background-size: 1%;
-    background-position: 88% 10%; */
 }
 #player-wrapper {
     display: none;
@@ -302,67 +304,6 @@ footer #pad {
     width: 100%;
     display: block;
     height: 50px;
-}
-#theuser img {
-    height:25px;
-    width:25px;
-}
-#user-dropdown {
-    display:none;
-}
-#user-wrapper {
-    text-align:right;
-    margin-top:-3px;
-    margin-right:-1px;
-    padding:10px;
-}
-#user-wrapper span {
-    display:block;
-    border-bottom:solid 1px #555;
-    margin-bottom:5px;
-}
-#user-wrapper a {
-    display:block;
-    width:100%;
-}
-
-#user-wrapper:hover #user-dropdown {
-    color:#ddd;
-    display:block;
-    background-color:rgba(0, 0, 0, 0.50);
-    padding:10px;
-    margin-top: -4px;
-    margin-right:-2px;
-    border-radius:4px;
-}
-
-em#userimg {
-    color: #0C8BB3;
-    font-size: 28px;
-    line-height: 28px;
-}
-#ratings {
-  width:100%;
-  display:none;
-}
-#ratings:hover {
-  display:block;
-}
-.thumb {
-    font-size:60px;
-    position:absolute;
-}
-#thumbsdown {
-    left:20px;
-}
-#ratings:hover #thumbsdown {
-    color:red;
-}
-#thumbsup {
-    right:20px;
-}
-#ratings:hover #thumbsup {
-    color:green;
 }
 #savedsearches {
     display: inline-block;
@@ -447,6 +388,20 @@ em#userimg {
     height: 30px;
     width: 317px;
 }
+.inline-credits .andrew-baldock.com .for .dreamfactory.com .2013 {
+    color:#bada55!important;
+}
+#offline {
+    display:inline-block;
+    opacity:0.4;
+}
+#offline h1 {
+    font-size:45px;
+}
+
+/* Responsive CSS 
+--------------------------------------------------------*/
+
 @media only screen and (min-width: 1422px)  {
     #results {
         width:1414px;
@@ -500,7 +455,7 @@ em#userimg {
         width:650px;
     }
     #player-wrapper-sticky-wrapper, #player-wrapper {
-        height:height: 170px!important;
+        height: 170px!important;
     }
     #player iframe {
         height: 166px;

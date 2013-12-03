@@ -7,26 +7,24 @@ define(function (require) {
 
         model: SoundcloudTrack,
 
-        url: '',
+        initialize: function () {   // fires at creation.
+            
+            /* CONFIG: YOU SHOULD CHANGE THESE VALUES to your own!!!
+             * get your own client ID here:
+             * https://soundcloud.com/you/apps
+            --------------------------------------------*/
+            SC.initialize({
+                client_id:    '7558e3a7eeacacbe55b7c0c1ab9107d9',
+                redirect_uri: 'http://andrewbaldock.com/skylabfm-demo/callback.html'
+            });
+        },
 
-        /* sync: function (method, model, options) {
-            if (method === "read") {
-                if (options) {
-                    return this.sendRequestWithOptions({
-                        xaction: "read",
-                        rootNode: "planTypes",
-                        callback: function (result, data) {
-                            if (result)
-                                options.success(data);
-                            else
-                                options.error(data);
-                        }
-                    });
-                }
-            } else {
-                return NUCCollection.prototype.sync.apply(this, arguments);
-            }
-        }, */
+        search: function (usrInput) {
+            var me = this;
+            SC.get('/tracks', { q: usrInput }, function(result) {
+                me.reset(result);   // backbonejs.org/#Collection-reset
+            });   
+        }
 
     });
 

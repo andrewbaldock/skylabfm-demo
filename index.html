@@ -4,14 +4,15 @@
     <title>Skylab FM demo version</title>
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/longshadow.css" rel="stylesheet" type="text/css">
-    <script data-main="js/app" src="js/lib/require.js"></script>
+    <link rel="icon" type="image/png" href="css/favicon.ico">
+    <script data-main="js/start" src="js/lib/require.js"></script>
 </head>
 <body>
 	<a href="/"><h1 class="longshadow">skylab fm</h1></a>
 	<p id="subtitle">soundcloud listening lounge</p>
     <div id="main">
 		<div id="thequery">
-			<form action="" id="search" name="search" onsubmit="return false;">
+			<form action="#" id="search" name="search" onsubmit="return false;">
 				<div id="querywrap">
 					<input class="field" id="query" type="text" value= "" onfocus="this.select();" placeholder="search for music">
 					<em id="searchclear" class="icon-remove-circle" id="searchx"></em>
@@ -21,8 +22,22 @@
 				</button>
 			</form>
 		</div>
+		<div id="savedsearches"></div>
+		<div id="player-wrapper">
+			<div id="player">
+				<iframe frameborder="no" id="widget" name="widget" scrolling="no" seamless="seamless" src=""></iframe>
+			</div>
+		</div><!--/player-wrapper-->
 		<div id="results"></div>
 	</div><!--/main-->
 	<div id="spinner"></div>
+	<div id="offline"><h1>~ offline ~</h1></div>
+	<footer>
+		<div id="pad"></div>
+		<div id="credits">
+				<a href="http://andrewbaldock.com" target="_blank">Andrew Baldock</a>
+				 <span id="yr">2013</span>
+		</div>
+	</footer>
 </body>
 </html>

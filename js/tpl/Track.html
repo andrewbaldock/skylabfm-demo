@@ -1,0 +1,9 @@
+<div class="track-wrap">
+	<div class="track <%= model.get('id') %> <%= model.counter %> unplayed" data-trackid="<%= model.get('id') %>" data-trackcounter="<%= model.counter %>" style="background-image:url('<%= model.get('art') %>');">
+		<div class="text"> 
+			<span> <%= model.get('user.username') %> </span>
+			<br>
+			<p><%= model.get('title') %></p>
+		</div>
+	</div>
+</div>
